@@ -5,5 +5,9 @@
     <color name="pink">#FFFF0000</color>
     <color name="backgroundWhite">#F8FDFF</color>
     <color name="backgroundBlue">#2DC3FF</color>
+    <color name="main">#219bc4</color>
+    <color name="gray">#808080</color>
+    <color name="bg">#F8FDFF</color>
+    <color name="bwhite">#e6e6e6</color>
 
 </resources>

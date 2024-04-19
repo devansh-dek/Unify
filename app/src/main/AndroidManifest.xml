@@ -20,11 +20,7 @@
         <activity
             android:name=".Presentations.ChattingSystem.ChatScreen.ChatsView"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".PresentationsFaculty.FacultyActivity"
@@ -48,7 +44,11 @@
         <activity
             android:name=".Presentations.SplashScreen.MainActivity"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
 

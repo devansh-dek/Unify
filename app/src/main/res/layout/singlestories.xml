@@ -20,12 +20,14 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
+        android:layout_marginTop="3dp"
         android:id="@+id/profilename"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
+        android:textSize="10dp"
         android:layout_height="wrap_content"
         android:fontFamily="monospace"
         android:text="DEVANSH"
-
+        android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profile_image" />
