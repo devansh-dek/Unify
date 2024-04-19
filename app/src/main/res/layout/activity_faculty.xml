@@ -7,7 +7,7 @@
     tools:context=".PresentationsFaculty.FacultyActivity">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/attendance"
         android:layout_width="148dp"
         android:layout_height="123dp"
 
@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
-            app:srcCompat="@drawable/heart" />
+            app:srcCompat="@drawable/attendance" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView

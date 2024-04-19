@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/messagereceivecstm"
         android:padding="10dp"
+        android:textColor="@color/black"
         android:text="Message is sent to Me"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
