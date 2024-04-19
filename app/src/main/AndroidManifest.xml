@@ -15,13 +15,14 @@
         android:theme="@style/Theme.Unify"
         tools:targetApi="31">
         <activity
+            android:name=".PresentationsFaculty.AttendanceActivity"
+            android:exported="false" />
+        <activity
             android:name=".Presentations.ChattingSystem.ChatScreen.PersonalChatScreen"
             android:exported="false" />
         <activity
             android:name=".Presentations.ChattingSystem.ChatScreen.ChatsView"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
         <activity
             android:name=".PresentationsFaculty.FacultyActivity"
             android:exported="false" />
@@ -49,7 +50,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
 
         <meta-data
