@@ -52,7 +52,7 @@
         app:cardElevation="20dp"
         android:layout_height="123dp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/studyMaterials"
+        app:layout_constraintBottom_toBottomOf="@+id/cpwing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/attendace"
         app:layout_constraintTop_toTopOf="@+id/attendace">

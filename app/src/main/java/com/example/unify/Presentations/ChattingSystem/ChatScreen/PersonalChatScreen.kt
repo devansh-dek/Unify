@@ -48,23 +48,23 @@ class PersonalChatScreen : AppCompatActivity() {
         val name = intent.getStringExtra("name")
 
         supportActionBar?.title = name
-    messageList = ArrayList()
+        messageList = ArrayList()
         adapter = PersonalChatAdapter(this,messageList)
         binding.chatsrv.layoutManager = LinearLayoutManager(this)
         binding.chatsrv.adapter = adapter
 
         val senderUid = FirebaseAuth.getInstance().currentUser!!.uid
         senderRoom = name + senderUid
-        receiverRoom = senderUid
+        receiverRoom =  name
         //Addchats to adapter
 
         try{
             DBref.child("chats").child(senderRoom!!).child("messages")
-                .addValueEventListener(object :ValueEventListener{
+                .addValueEventListener(object : ValueEventListener {
 
-                        override fun onDataChange(snapshot: DataSnapshot) {
-Log.e("Personalized chats ","Came here moye")
-                    messageList.clear()
+                    override fun onDataChange(snapshot: DataSnapshot) {
+                        Log.e("Personalized chats ","Came here moye")
+                        messageList.clear()
                         for(postSnapshot in snapshot.children){
                             val message = postSnapshot.getValue(com.example.unify.Data.Models.Message::class.java)
                             messageList.add(message!!)
@@ -73,29 +73,30 @@ Log.e("Personalized chats ","Came here moye")
                     }
 
                     override fun onCancelled(error: DatabaseError) {
-Log.e("Perosnal Chats ","the error is ${error.message}")                    }
+                        Log.e("Perosnal Chats ","the error is ${error.message}")                    }
 
 
                 })
 
         }
-           catch (e:Exception){
+        catch (e:Exception){
 
-               Log.e("Personal chats ","NOT WORKING OMYE MOYE ${e.localizedMessage}")
-           }
+            Log.e("Personal chats ","NOT WORKING OMYE MOYE ${e.localizedMessage}")
+        }
 
 
         binding.sendbtn.setOnClickListener {
-        val message = binding.messagebox.text.toString()
+            val message = binding.messagebox.text.toString()
             val messageObject = com.example.unify.Data.Models.Message(message, senderUid)
             DBref.child("chats").child(senderRoom!!).child("messages").push()
                 .setValue(messageObject).addOnSuccessListener {
                     DBref.child("chats").child(receiverRoom!!).child("messages").push()
                         .setValue(messageObject)
                 }
-binding.messagebox.setText("")
+            binding.messagebox.setText("")
 
         }
+
 
 
 

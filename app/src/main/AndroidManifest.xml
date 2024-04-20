@@ -25,7 +25,9 @@
             android:exported="false" />
         <activity
             android:name=".Presentations.StudentsDashBoard.Features.Clubs"
-            android:exported="false" />
+            android:exported="true">
+
+        </activity>
         <activity
             android:name=".Presentations.StudentsDashBoard.Features.AllDocuments"
             android:exported="false" />

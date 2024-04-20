@@ -13,12 +13,6 @@ class ClubChat : AppCompatActivity() {
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val intent = Intent(applicationContext, PersonalClubChat::class.java)
-
-        binding.cpwing.setOnClickListener {
-            intent.putExtra("name","cpwing")
-            applicationContext.startActivity(intent)
-        }
 
 
 

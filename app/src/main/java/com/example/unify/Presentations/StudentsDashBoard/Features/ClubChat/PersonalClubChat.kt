@@ -34,7 +34,7 @@ class PersonalClubChat : AppCompatActivity() {
             finish()
         }
         if (actionBar != null) {
-            binding.materialToolbar3.setTitle("Your New Title")
+            binding.materialToolbar3.setTitle("Test Name")
         }
 
 
@@ -42,17 +42,15 @@ class PersonalClubChat : AppCompatActivity() {
         DBref = FirebaseDatabase.getInstance().getReference()
 
         val name = intent.getStringExtra("name")
-        val uid = intent.getStringExtra("uid")
         supportActionBar?.title = name
-        Log.e("Personal Chat Screen","Uid is ${uid}")
         messageList = ArrayList()
         adapter = PersonalChatAdapter(this,messageList)
         binding.chatsrv.layoutManager = LinearLayoutManager(this)
         binding.chatsrv.adapter = adapter
 
         val senderUid = FirebaseAuth.getInstance().currentUser!!.uid
-        senderRoom = uid + senderUid
-        receiverRoom = senderUid + uid
+        senderRoom = name + senderUid
+        receiverRoom = name
         //Addchats to adapter
 
         try{

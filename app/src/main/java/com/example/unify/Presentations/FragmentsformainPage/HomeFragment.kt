@@ -1,5 +1,6 @@
 package com.example.unify.Presentations.FragmentsformainPage
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -13,6 +14,7 @@ import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.unify.Data.Models.Post
 import com.example.unify.Data.Models.User
+import com.example.unify.Presentations.ChattingSystem.ChatScreen.ChatsView
 import com.example.unify.Presentations.FragmentsformainPage.FragmentsForProfile.Adapters.PostMainPageAdapter
 import com.example.unify.Presentations.FragmentsformainPage.FragmentsForProfile.Adapters.StoriesAdapter
 import com.example.unify.R
@@ -44,6 +46,10 @@ private lateinit var adapter : PostMainPageAdapter
 adapter = PostMainPageAdapter(requireContext(),postList)
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = adapter
+        binding.imageView6.setOnClickListener {
+            startActivity(Intent(context,ChatsView::class.java))
+        }
+
 //
 //        setHasOptionsMenu(true)
 //        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.materialToolbar2)
