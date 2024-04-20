@@ -38,6 +38,20 @@ class PersonalChatScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         DBref = FirebaseDatabase.getInstance().getReference()
 
+        setSupportActionBar(binding.materialToolbar3)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.materialToolbar3.setNavigationOnClickListener {
+
+            finish()
+        }
+        if (actionBar != null) {
+            binding.materialToolbar3.setTitle("Your New Title")
+        }
+
+
+
+
         val name = intent.getStringExtra("name")
         val uid = intent.getStringExtra("uid")
         supportActionBar?.title = name
