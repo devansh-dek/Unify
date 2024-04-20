@@ -39,6 +39,7 @@ class ReelsActivity : AppCompatActivity() {
                     if(it!=null){
                         if (url !=  null) {
                             videoUrl= url
+
                         }
                     }
                 }
@@ -64,17 +65,45 @@ class ReelsActivity : AppCompatActivity() {
             Firebase.firestore.collection(USER_NODE).document(Firebase.auth.currentUser!!.uid).get().addOnSuccessListener {
                 var user: User= it.toObject<User>()!!
                 Log.e("REEL dded","yes btn clicked")
-                val reel : Reel = Reel(videoUrl!!,binding.caption.text.toString(),user.image!!)
-                Firebase.firestore.collection(REEL).document().set(reel).addOnSuccessListener {
-                    Log.e("Reeladded","Reel added${reel} ")
-                    Firebase.firestore.collection(Firebase.auth.currentUser!!.uid+REEL).document().set(reel)
-                        .addOnSuccessListener {
-                            startActivity(Intent(this, MainHomeActivity::class.java))
-                            finish()
-                        }
+                Log.e("REEL ADDED WITH LINK ","reel link ${videoUrl}")
 
+                val reel= Reel(videoUrl!!,binding.caption.text.toString(),user.image!!)
+                binding.yesbtn.setOnClickListener {
+                    Firebase.auth.currentUser?.let { firebaseUser ->
+                        Firebase.firestore.collection(USER_NODE)
+                            .document(firebaseUser.uid)
+                            .get()
+                            .addOnSuccessListener { documentSnapshot ->
+                                val user = documentSnapshot.toObject<User>()
+                                user?.let { currentUser ->
+                                    Log.e("REEL Added", "Yes button clicked")
+                                    Log.e("REEL ADDED WITH LINK", "Reel link: $videoUrl")
+var  caption = binding.caption.text.toString()
+                                    if(caption==null)caption = " "
+                                    var currentuserImage = currentUser.image
+                                    if(currentuserImage==null)currentuserImage = " "
+                                    Log.e("three thigs are","$caption $currentuserImage $videoUrl")
 
+                                    val reel = Reel(videoUrl!!, caption, currentuserImage)
+                                    Log.e("REEL DETAILS","THe reel details is $reel")
+                                    Firebase.firestore.collection(REEL)
+                                        .add(reel)
+                                        .addOnSuccessListener { documentReference ->
+                                            Log.e("Reel added", "Reel added with ID: ${documentReference.id}")
+                                            startActivity(Intent(this, MainHomeActivity::class.java))
+                                            finish()
+                                        }
+                                        .addOnFailureListener { e ->
+                                            Log.e("Firestore", "Error adding reel", e)
+                                        }
+                                } ?: Log.e("Firestore", "User data not found")
+                            }
+                            .addOnFailureListener { e ->
+                                Log.e("Firestore", "Error getting user data", e)
+                            }
+                    } ?: Log.e("Firebase Auth", "Current user not found")
                 }
+
             }
 
 

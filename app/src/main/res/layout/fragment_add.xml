@@ -13,7 +13,7 @@
     android:layout_gravity="center_horizontal">
     <Button
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
+android:layout_margin="10dp"
         android:textColor="@color/bwhite"
         android:backgroundTint="@color/main"
         android:textStyle="bold"
@@ -28,26 +28,10 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginStart="70dp"
-        android:layout_marginTop="-38dp"
+        android:layout_marginTop="-50dp"
         android:src="@drawable/poast" />
 
-    <Button
-        android:layout_width="300dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="25dp"
-        android:textStyle="bold"
-        android:backgroundTint="@color/main"
-        android:id="@+id/addReel"
-        android:layout_height="wrap_content"
-        android:text="ADD REEL!" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="-42dp"
-        android:src="@drawable/video" />
 
 
 </LinearLayout>

@@ -30,9 +30,6 @@ private lateinit var binding : FragmentAddBinding
       binding.addPost.setOnClickListener {
           startActivity(Intent(activity,PostsActivity::class.java))
       }
-    binding.addReel.setOnClickListener {
-        startActivity(Intent(activity,ReelsActivity::class.java))
-    }
         return binding.root
     }
 

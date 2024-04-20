@@ -20,16 +20,17 @@
         android:name="com.example.unify.Presentations.FragmentsformainPage.AddFragment"
         android:label="fragment_add"
         tools:layout="@layout/fragment_add" />
-    <fragment
-        android:id="@+id/navigation_reel"
-        android:name="com.example.unify.Presentations.FragmentsformainPage.ReelFragment"
-        android:label="fragment_reel"
-        tools:layout="@layout/fragment_reel" />
+
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.unify.Presentations.FragmentsformainPage.ProfileFragment"
         android:label="fragment_profile"
 
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/navigation_reel"
+        android:name="com.example.unify.Presentations.StudentsDashBoard.MainDashBoardFragmentStudents"
+        android:label="fragment_reel"
+        tools:layout="@layout/fragment_main_dash_board_students" />
 
 </navigation>
