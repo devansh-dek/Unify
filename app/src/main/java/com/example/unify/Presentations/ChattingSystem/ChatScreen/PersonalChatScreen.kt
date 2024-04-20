@@ -1,17 +1,10 @@
 package com.example.unify.Presentations.ChattingSystem.ChatScreen
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
 import android.util.Log
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.unify.Presentations.ChattingSystem.ChatAdapters.PersonalChatAdapter
-import com.example.unify.R
 import com.example.unify.databinding.ActivityPersonalChatScreenBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -36,6 +29,20 @@ class PersonalChatScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        setSupportActionBar(binding.materialToolbar3)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayShowHomeEnabled(true)
+        binding.materialToolbar3.setNavigationOnClickListener {
+
+            finish()
+        }
+        if (actionBar != null) {
+            binding.materialToolbar3.setTitle("Your New Title")
+        }
+
+
+
         DBref = FirebaseDatabase.getInstance().getReference()
 
         val name = intent.getStringExtra("name")
