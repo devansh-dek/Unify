@@ -54,8 +54,8 @@ class SignUpScreen : AppCompatActivity() {
                 binding.signUpBtn.text = "EDIT PROFILE BUTTON"
                 Firebase.firestore.collection(USER_NODE).document(Firebase.auth.currentUser!!.uid).get()
                     .addOnSuccessListener {
-                     user= it.toObject<User>()!!
-                        if(!user.image.isNullOrEmpty()){
+                         user= it.toObject<User>()!!
+                         if(!user.image.isNullOrEmpty()){
                             Picasso.get().load(user.image).into(binding.profileImage)
                         }
                         binding.password.setText(user.password)

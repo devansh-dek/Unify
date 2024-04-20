@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundWhite"
+    android:background="@drawable/bgg"
     tools:context=".Presentations.ChattingSystem.ChatScreen.PersonalChatScreen">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatsrv"
-        android:layout_width="409dp"
-        android:layout_height="663dp"
-        android:background="@color/backgroundWhite"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/messagebox"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginBottom="66dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,23 +21,24 @@
         android:gravity="center"
         android:id="@+id/messagebox"
 
-        android:layout_margin="5dp"
+        android:layout_marginLeft="15dp"
         android:background="@drawable/sendmessageeditbox"
         android:layout_width="320dp"
-        android:layout_height="66dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         android:hint="Write A Message.."
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
         app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/sendbtn"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/editText3"
-        app:srcCompat="@drawable/baseline_send_24" />
+        app:srcCompat="@drawable/send"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
