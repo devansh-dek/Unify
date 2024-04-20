@@ -93,9 +93,5 @@ var TempList = ArrayList<Post>()
     companion object {
 
     }
-//
-//    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-//        inflater.inflate(R.menu.homepagemenu,menu)
-//        super.onCreateOptionsMenu(menu, inflater)
-//    }
+
 }

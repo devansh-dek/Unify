@@ -48,9 +48,6 @@ class ProfileFragment : Fragment() {
 binding.tableLayout.setupWithViewPager(binding.viewPager)
 
 
-
-
-
         return binding.root
 
 

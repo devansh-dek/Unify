@@ -10,28 +10,32 @@
     <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
         android:id="@+id/searchView2"
-        app:layout_constraintBottom_toTopOf="@+id/searchidsrv"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginHorizontal="20dp"
-        app:hintAnimationEnabled="true"
-        app:boxCornerRadiusTopEnd="40dp"
-        app:boxCornerRadiusBottomStart="40dp"
-        app:boxCornerRadiusTopStart="40dp"
-        app:boxCornerRadiusBottomEnd="40dp"
-        app:hintTextColor="@color/main"
-        >
-        <com.google.android.material.textfield.TextInputEditText
-        android:hint="  Search"
-        android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toStartOf="@id/searchbtn"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="7dp"
+        app:boxCornerRadiusBottomEnd="40dp"
+        app:boxCornerRadiusBottomStart="40dp"
+        app:boxCornerRadiusTopEnd="40dp"
+        app:boxCornerRadiusTopStart="40dp"
+        app:hintAnimationEnabled="true"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/searchidsrv"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="  Search"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@id/searchbtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
@@ -49,6 +53,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/searchidsrv"
+        android:layout_marginTop="7dp"
         android:layout_width="match_parent"
         android:layout_height="700dp"
         app:layout_constraintEnd_toEndOf="parent"
