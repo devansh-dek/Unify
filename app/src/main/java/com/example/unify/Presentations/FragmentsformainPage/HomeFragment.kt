@@ -50,9 +50,6 @@ adapter = PostMainPageAdapter(requireContext(),postList)
             startActivity(Intent(context,ChatsView::class.java))
         }
 
-//
-//        setHasOptionsMenu(true)
-//        (requireActivity() as AppCompatActivity).setSupportActionBar(binding.materialToolbar2)
 Firebase.firestore.collection(POST).get().addOnSuccessListener {
 var TempList = ArrayList<Post>()
     postList.clear()

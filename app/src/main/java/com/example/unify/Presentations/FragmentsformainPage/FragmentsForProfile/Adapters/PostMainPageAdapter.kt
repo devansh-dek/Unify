@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -65,10 +66,12 @@ class PostMainPageAdapter(var context: Context, var postList: ArrayList<Post>) :
             holder.binding.Like.setOnClickListener {
                 if(!isHeart){
                     holder.binding.Like.setImageResource(R.drawable.filledheart)
+                    holder.binding.liketext.visibility = View.VISIBLE
                     isHeart = true
                 }
                 else{
                     holder.binding.Like.setImageResource(R.drawable.heart)
+                    holder.binding.liketext.visibility = View.GONE
 
                     isHeart = false;
                 }
