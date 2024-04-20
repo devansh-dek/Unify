@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PresentationsFaculty.FacultyActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Presentations.StudentsDashBoard.MainDashBoardFragmentStudents">
+
 
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
         android:fontFamily="monospace"
-        android:text="TEACHERS DASHBOARD!!"
+        android:text="MY DASHBOARD!!"
 
 
         android:textAlignment="center"
@@ -24,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/attendace"
+        android:id="@+id/studyMaterials"
         android:layout_width="159dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
@@ -46,7 +47,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/uploadStudyMaterials"
+        android:id="@+id/hostelLeaving"
         android:layout_width="159dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
@@ -54,8 +55,8 @@
 
         app:layout_constraintBottom_toBottomOf="@+id/studyMaterials"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/attendace"
-        app:layout_constraintTop_toTopOf="@+id/attendace">
+        app:layout_constraintStart_toEndOf="@+id/studyMaterials"
+        app:layout_constraintTop_toTopOf="@+id/studyMaterials">
 
         <ImageView
             android:layout_width="match_parent"
@@ -68,18 +69,23 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/Communities"
         android:layout_width="159dp"
-        android:layout_height="123dp"
-        android:layout_marginBottom="280dp"
-        app:cardBackgroundColor="@color/black"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
+        android:layout_height="123dp"
+        app:cardBackgroundColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/attendace">
+        app:layout_constraintTop_toBottomOf="@+id/studyMaterials"
+        app:layout_constraintVertical_bias="0.088">
 
-
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="7dp"
+            android:src="@drawable/diversity"
+            />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -95,4 +101,36 @@
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Announcements"
+        android:layout_width="358dp"
+        android:layout_height="262dp"
+        android:elevation="20dp"
+
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="476dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/amaranth_bold"
+            android:text="Announcements!"
+            android:textAlignment="center"
+
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+        <TextView
+            android:layout_marginTop="40dp"
+            android:text="1. Section A CS lab cancelled! \n 2.   "
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
