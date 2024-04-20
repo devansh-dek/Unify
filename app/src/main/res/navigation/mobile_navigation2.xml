@@ -29,8 +29,8 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/navigation_reel"
-        android:name="com.example.unify.Presentations.StudentsDashBoard.MainDashBoardFragmentStudents"
-        android:label="fragment_reel"
-        tools:layout="@layout/fragment_main_dash_board_students" />
+        android:name="com.example.unify.Presentations.StudentsDashBoard.Features.ClubChat.ClubFragment"
+        android:label="fragment_club"
+        tools:layout="@layout/fragment_club" />
 
 </navigation>
