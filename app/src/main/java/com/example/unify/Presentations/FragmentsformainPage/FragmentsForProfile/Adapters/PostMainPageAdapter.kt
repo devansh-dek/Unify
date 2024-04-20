@@ -61,6 +61,19 @@ class PostMainPageAdapter(var context: Context, var postList: ArrayList<Post>) :
 
 
             }
+            var isHeart = false
+            holder.binding.Like.setOnClickListener {
+                if(!isHeart){
+                    holder.binding.Like.setImageResource(R.drawable.filledheart)
+                    isHeart = true
+                }
+                else{
+                    holder.binding.Like.setImageResource(R.drawable.heart)
+
+                    isHeart = false;
+                }
+
+            }
             Glide.with(context).load(postList.get(position).postUrl).placeholder(R.drawable.baseline_account_circle_24).into(holder.binding.postImage)
 //            holder.binding.Bio.text = postList.get(position).time
 //            if(postList.get(position).caption!=null)
