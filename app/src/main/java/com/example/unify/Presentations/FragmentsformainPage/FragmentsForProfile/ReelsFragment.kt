@@ -54,6 +54,7 @@ class ReelsFragment : Fragment() {
 
             }
             Log.e("Firestore", "REELTEMPList size: ${tempList.size}")
+
             reelList.addAll(tempList)
             adapter.notifyDataSetChanged()
         }

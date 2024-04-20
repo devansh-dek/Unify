@@ -36,6 +36,7 @@ class MyReelAdapter(var context: Context, var reelList: ArrayList<Reel>) :
         if(!reelList.get(position).profileLink.isEmpty())
         Picasso.get().load(reelList.get(position).profileLink).placeholder(R.drawable.baseline_account_circle_24).into(holder.binding.imageView)
         else
+            Picasso.get().load(reelList.get(position).profileLink).placeholder(R.drawable.baseline_account_circle_24).into(holder.binding.imageView)
 
 
         holder.binding.caption.setText(reelList.get(position).caption)
