@@ -24,9 +24,7 @@ class MainDashBoardFragmentStudents : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentMainDashBoardStudentsBinding.inflate(layoutInflater)
-    binding.event.setOnClickListener {
-        startActivity(Intent(context,EventActivity::class.java))
-    }
+
 
 
 

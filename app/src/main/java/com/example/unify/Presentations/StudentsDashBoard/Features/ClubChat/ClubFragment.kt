@@ -28,14 +28,33 @@ class ClubFragment : Fragment() {
         val intent = Intent(context, PersonalClubChat::class.java)
 
         binding.cpwing.setOnClickListener {
-            Toast.makeText(context,"Clicked CP WING", Toast.LENGTH_SHORT).show()
+//            Toast.makeText(context,"Clicked CP WING", Toast.LENGTH_SHORT).show()
             intent.putExtra("name","CPWING")
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
             context?.startActivity(intent)
         }
+        binding.Sdwing.setOnClickListener {
+//            Toast.makeText(context,"Clicked CP WING", Toast.LENGTH_SHORT).show()
+            intent.putExtra("name","SD WING")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
+            context?.startActivity(intent)
+        }
+        binding.pdmwing.setOnClickListener {
+//            Toast.makeText(context,"Clicked CP WING", Toast.LENGTH_SHORT).show()
+            intent.putExtra("name","PDM WING")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
 
+            context?.startActivity(intent)
+        }
+        binding.animewing.setOnClickListener {
+//            Toast.makeText(context,"Clicked CP WING", Toast.LENGTH_SHORT).show()
+            intent.putExtra("name","ANIME WING")
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+
+            context?.startActivity(intent)
+        }
 
         return binding.root
     }

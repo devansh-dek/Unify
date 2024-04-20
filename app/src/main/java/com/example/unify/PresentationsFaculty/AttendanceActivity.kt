@@ -36,7 +36,9 @@ class AttendanceActivity : AppCompatActivity() {
             launcher.launch("image/*")
 
         }
+binding.MarkAttendance.setOnClickListener {
 
+}
 
         setContentView(binding.root)
     }

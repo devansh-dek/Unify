@@ -49,7 +49,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/hostelLeaving"
+        android:id="@+id/Sdwing"
         android:layout_width="159dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
@@ -70,7 +70,7 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/Communities"
+        android:id="@+id/pdmwing"
         android:layout_width="159dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
@@ -91,17 +91,17 @@
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/event"
+        android:id="@+id/animewing"
         android:layout_width="159dp"
         android:layout_height="123dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="20dp"
         app:cardBackgroundColor="@color/white"
 
-        app:layout_constraintBottom_toBottomOf="@+id/Communities"
+        app:layout_constraintBottom_toBottomOf="@+id/pdmwing"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Communities"
-        app:layout_constraintTop_toTopOf="@+id/Communities">
+        app:layout_constraintStart_toEndOf="@+id/pdmwing"
+        app:layout_constraintTop_toTopOf="@+id/pdmwing">
 
         <ImageView
             android:id="@+id/documents"
