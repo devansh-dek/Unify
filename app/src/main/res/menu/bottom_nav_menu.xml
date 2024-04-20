@@ -13,8 +13,8 @@
 
     <item
         android:id="@+id/navigation_reel"
-        android:icon="@drawable/img"
-        android:title="Dashboard" />
+        android:icon="@drawable/img12l"
+        android:title="Community" />
     <item
         android:id="@+id/navigation_Add"
         android:icon="@drawable/baseline_add_a_photo_241"
