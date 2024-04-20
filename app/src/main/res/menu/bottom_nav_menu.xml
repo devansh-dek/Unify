@@ -12,13 +12,13 @@
         android:title="Search" />
 
     <item
-        android:id="@+id/navigation_Add"
-        android:icon="@drawable/ic_notifications_black_24dp"
+        android:id="@+id/navigation_reel"
+        android:icon="@drawable/img"
         android:title="Add" />
     <item
-        android:id="@+id/navigation_reel"
-        android:icon="@drawable/baseline_ondemand_video_24"
-        android:title="Reel" />
+        android:id="@+id/navigation_Add"
+        android:icon="@drawable/baseline_add_a_photo_241"
+        android:title="Add" />
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/baseline_person_24"
