@@ -93,6 +93,7 @@ class PersonalClubChat : AppCompatActivity() {
                 })
 
         }
+
         catch (e:Exception){
 
             Log.e("Personal chats ","NOT WORKING OMYE MOYE ${e.localizedMessage}")
