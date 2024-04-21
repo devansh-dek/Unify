@@ -37,7 +37,6 @@ class PersonalChatScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         DBref = FirebaseDatabase.getInstance().getReference()
-
         setSupportActionBar(binding.materialToolbar3)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)

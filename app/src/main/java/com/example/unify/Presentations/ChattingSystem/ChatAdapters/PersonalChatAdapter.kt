@@ -27,20 +27,20 @@ import com.squareup.picasso.Picasso
 class PersonalChatAdapter(var context: Context, var msgList: ArrayList<Message>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
-val ITEM_RECEIVE = 1
+    val ITEM_RECEIVE = 1
     val ITEM_SENT = 2
 
     inner class ViewHolder(var binding: ChatsingleBinding) :
         RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-if(viewType==1){
-    val view : View = LayoutInflater.from(context).inflate(R.layout.receivemessage,parent,false)
-    return  ReceiveViewHolder(view)
-}
+        if(viewType==1){
+            val view : View = LayoutInflater.from(context).inflate(R.layout.receivemessage,parent,false)
+            return  ReceiveViewHolder(view)
+        }
         else{
-    val view : View = LayoutInflater.from(context).inflate(R.layout.sentmessage,parent,false)
-    return  SentViewHolder(view)
+            val view : View = LayoutInflater.from(context).inflate(R.layout.sentmessage,parent,false)
+            return  SentViewHolder(view)
 
         }
     }
@@ -61,7 +61,7 @@ if(viewType==1){
     }
 
     override fun getItemViewType(position: Int): Int {
-    val currentMessage = msgList[position]
+        val currentMessage = msgList[position]
         if(FirebaseAuth.getInstance().currentUser?.uid.equals(currentMessage.senderId)){
             return ITEM_SENT
         }
@@ -73,11 +73,11 @@ if(viewType==1){
 
 
     override fun getItemCount(): Int {
-return msgList.size
+        return msgList.size
     }
 
     class SentViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-val sentMessage = itemView.findViewById<TextView>(R.id.messagesent)
+        val sentMessage = itemView.findViewById<TextView>(R.id.messagesent)
     }
     class ReceiveViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val recieveMessage = itemView.findViewById<TextView>(R.id.messagereceive)
