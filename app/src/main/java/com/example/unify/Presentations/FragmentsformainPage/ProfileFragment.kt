@@ -39,6 +39,7 @@ class ProfileFragment : Fragment() {
         binding.editTags.setOnClickListener {
             val intent = Intent(activity,SignUpScreen::class.java)
             intent.putExtra("MODE",1)
+            startActivity(intent)
 
         }
         profilePageAdapter = ProfilePageAdapter(requireActivity().supportFragmentManager)

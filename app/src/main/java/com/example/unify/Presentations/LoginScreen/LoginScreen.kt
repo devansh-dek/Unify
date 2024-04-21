@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import com.example.unify.Data.Models.User
 import com.example.unify.Presentations.MainHomePage.MainHomeActivity
+import com.example.unify.Presentations.SignUpScreen.SignUpScreen
 import com.example.unify.R
 import com.example.unify.databinding.ActivityLoginScreenBinding
 import com.google.firebase.Firebase
@@ -41,7 +42,7 @@ class LoginScreen : AppCompatActivity() {
             }
         }
         binding.registerinstead.setOnClickListener {
-
+            startActivity(Intent(this,SignUpScreen::class.java))
         }
 
 
