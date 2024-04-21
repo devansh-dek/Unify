@@ -54,7 +54,7 @@ class PostsActivity : AppCompatActivity() {
 binding.materialToolbar.setNavigationOnClickListener {
     finish()
 }
-binding.AddImage.setOnClickListener {
+        binding.AddImage.setOnClickListener {
     launcher.launch("image/*")
 
 }
